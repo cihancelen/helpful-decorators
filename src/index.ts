@@ -1,3 +1,4 @@
+import { Call } from './call';
 import { FormatNumber } from './format-number';
 
 class Test {
@@ -6,6 +7,11 @@ class Test {
 
   @FormatNumber('de-DE', { style: 'currency', currency: 'EUR' })
   costEuro = 123
+
+  @Call(Math.random() * 10 > 5)
+  alert() {
+    console.log('The method is called.');
+  }
 }
 
 function main() {
@@ -13,6 +19,8 @@ function main() {
 
   console.log(test.cost);
   console.log(test.costEuro);
+
+  test.alert();
 }
 
 main()

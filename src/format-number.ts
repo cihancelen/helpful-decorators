@@ -2,9 +2,9 @@
  * Gets the formatted number by Intl.NumberFormat.
  * @param locale {String}
  * @param options {Intl.NumberFormatOptions}
- * @returns {String}
+ * @returns {Function}
  */
-export function FormatNumber(locale: string, options?: Intl.NumberFormatOptions) {
+export function FormatNumber(locale: string, options?: Intl.NumberFormatOptions): Function {
   return function (target: Object, key: string | symbol) {
     let value = (target as any)[key] as string | number
 
