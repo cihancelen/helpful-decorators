@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "typescript": "^4.9.4"
+  },
+  "name": "helpful-decorators",
+  "version": "1.0.0",
+  "description": "Helpful typescript decorators.",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "tsc --watch",
+    "nodemon": "nodemon dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript",
+    "typescript-decorators",
+    "utils"
+  ],
+  "author": "cihancelen <cihan.celen37@hotmail.com>",
+  "license": "ISC"
+}
