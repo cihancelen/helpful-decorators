@@ -1,5 +1,6 @@
 import { Call } from './call';
 import { FormatNumber } from './format-number';
+import { WithTax } from './with-tax';
 
 class Test {
   @FormatNumber('tr-TR', { style: 'currency', currency: 'TRY' })
@@ -7,6 +8,9 @@ class Test {
 
   @FormatNumber('de-DE', { style: 'currency', currency: 'EUR' })
   costEuro = 123
+
+  @WithTax(1.18)
+  costWithTax = 1
 
   @Call(Math.random() * 10 > 5)
   alert() {
@@ -17,8 +21,9 @@ class Test {
 function main() {
   const test = new Test();
 
-  console.log(test.cost);
-  console.log(test.costEuro);
+  console.log('Cost :', test.cost);
+  console.log('Cost Euro:', test.costEuro);
+  console.log('Cost with tax(1.18%):', test.costWithTax);
 
   test.alert();
 }
