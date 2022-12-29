@@ -7,10 +7,11 @@
   "description": "Helpful typescript decorators.",
   "main": "src/index.ts",
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "rimraf": "^3.0.2"
   },
   "scripts": {
-    "ts": "tsc --watch",
+    "ts": "rimraf ./dist && tsc --watch",
     "start": "nodemon dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
