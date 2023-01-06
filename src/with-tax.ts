@@ -3,7 +3,7 @@
  * @param taxRatio {number}
  * @returns {Function}
  */
-export function WithTax(taxRatio: number) {
+export function WithTax(taxRatio: number): Function {
   return function (target: Object, key: string | symbol) {
     let value = (target as any)[key] as number
 

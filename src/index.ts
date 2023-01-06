@@ -1,4 +1,6 @@
+
 import { Call } from './call';
+import { DebouncedCall } from './debounced-call';
 import { FormatNumber } from './format-number';
 import { WithTax } from './with-tax';
 
@@ -16,6 +18,11 @@ class Test {
   alert() {
     console.log('The method is called.');
   }
+
+  @DebouncedCall(2000)
+  alert2() {
+    console.log('Debounced call.', Date.now());
+  }
 }
 
 function main() {
@@ -26,6 +33,8 @@ function main() {
   console.log('Cost with tax(1.18%):', test.costWithTax);
 
   test.alert();
+
+  test.alert2()
 }
 
 main()
